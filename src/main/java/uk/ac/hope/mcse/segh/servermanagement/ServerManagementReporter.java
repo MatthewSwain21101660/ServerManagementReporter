@@ -8,10 +8,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 @EnableScheduling
 @EnableAsync
-public class ServerManagementApplication {
+public class ServerManagementReporter {
 
     public static void main(String[] args) {
-        SpringApplication.run(ServerManagementApplication.class, args);
+        SpringApplication.run(ServerManagementReporter.class, args);
     }
 
 }

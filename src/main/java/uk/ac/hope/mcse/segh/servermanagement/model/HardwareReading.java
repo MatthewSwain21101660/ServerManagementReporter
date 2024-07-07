@@ -15,41 +15,26 @@ public class HardwareReading {
 
     private String dateTime;
 
-    private double cpu;
+    private String cpu;
 
-    private double ram;
+    private String ram;
 
 
     public BigInteger get_id() {
         return _id;
     }
 
-    public void set_id(BigInteger _id) {
-        this._id = _id;
-    }
-
     public String getDateTime() {
         return dateTime;
     }
 
-    public void setDateTime(String dateTime) {
-        this.dateTime = dateTime;
-    }
-
-    public double getCpu() {
+    public String getCpu() {
         return cpu;
     }
 
-    public void setCpu(double cpu) {
-        this.cpu = cpu;
-    }
-
-    public double getRam() {
+    public String getRam() {
         return ram;
     }
 
-    public void setRam(double ram) {
-        this.ram = ram;
-    }
 
 }
