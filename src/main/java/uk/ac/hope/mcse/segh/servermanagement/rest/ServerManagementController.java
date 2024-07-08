@@ -21,6 +21,7 @@ class ServerManagementController {
         this.returnHardwareReadingService = returnHardwareReadingService;
     }
 
+    @CrossOrigin(origins = "http://localhost:63342")
     @GetMapping("/getUtil")
     ResponseEntity<List<HardwareReading>> returnReading(String hardwareType, @RequestParam(value= "timePeriod", defaultValue = "minute") String timePeriod){
         return ResponseEntity.ok().body(returnHardwareReadingService.returnReading(timePeriod));

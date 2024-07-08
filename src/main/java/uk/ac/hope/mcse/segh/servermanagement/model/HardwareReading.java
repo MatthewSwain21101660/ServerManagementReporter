@@ -2,7 +2,7 @@ package uk.ac.hope.mcse.segh.servermanagement.model;
 
 import jakarta.persistence.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import oshi.hardware.GlobalMemory;
+
 
 import java.math.BigInteger;
 
