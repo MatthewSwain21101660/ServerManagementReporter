@@ -19,6 +19,8 @@ public class HardwareReading {
 
     private String ram;
 
+    private String ramTotal;
+
 
     public BigInteger get_id() {
         return _id;
@@ -34,6 +36,10 @@ public class HardwareReading {
 
     public String getRam() {
         return ram;
+    }
+
+    public String getRamTotal() {
+        return ramTotal;
     }
 
 
