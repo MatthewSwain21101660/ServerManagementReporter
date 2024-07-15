@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import uk.ac.hope.mcse.segh.servermanagement.model.HardwareReading;
 import uk.ac.hope.mcse.segh.servermanagement.repo.HardwareReadingRepository;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 @Service
@@ -23,25 +25,36 @@ public class ReturnHardwareReadingServiceImpl implements ReturnHardwareReadingSe
     @Override
     public List<HardwareReading> returnReading(String timePeriod) {
 
-
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         switch(timePeriod) {
             case "minute" :
-                return repository.findAll();
+                String minuteNow = LocalDateTime.now().format(dtf);
+                String minuteOffset = LocalDateTime.now().minusSeconds(61).format(dtf);
+                return repository.findByDateTimeBetween(minuteOffset, minuteNow);
 
             case "hour" :
-                break;
+                String hourNow = LocalDateTime.now().format(dtf);
+                String hourOffset = LocalDateTime.now().minusSeconds(3601).format(dtf);
+                return repository.findByDateTimeBetween(hourOffset, hourNow);
 
             case "day" :
-                break;
+                String dayNow = LocalDateTime.now().format(dtf);
+                String dayOffset = LocalDateTime.now().minusSeconds(86401).format(dtf);
+                return repository.findByDateTimeBetween(dayOffset, dayNow);
 
             case "week":
-                break;
+                String weekNow = LocalDateTime.now().format(dtf);
+                String weekOffset = LocalDateTime.now().minusSeconds(604801).format(dtf);
+                return repository.findByDateTimeBetween(weekOffset, weekNow);
 
             case "month":
-                break;
+                String monthNow = LocalDateTime.now().format(dtf);
+                String monthOffset = LocalDateTime.now().minusSeconds(2592001).format(dtf);
+                return repository.findByDateTimeBetween(monthOffset, monthNow);
 
                 }
 
-        return repository.findAll();
+                return null;
+        //return repository.findAll();
     }
 }

@@ -3,11 +3,10 @@ package uk.ac.hope.mcse.segh.servermanagement.repo;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import uk.ac.hope.mcse.segh.servermanagement.model.HardwareReading;
 
-import javax.swing.text.html.Option;
 import java.math.BigInteger;
-import java.util.Optional;
+import java.util.List;
 
 public interface HardwareReadingRepository extends MongoRepository <HardwareReading, BigInteger> {
 
-    Optional<HardwareReading> findHardwareReadingByCpu(double cpu);
+    List<HardwareReading> findByDateTimeBetween(String dateTimeGT, String dateTimeLT);
 }
