@@ -52,6 +52,9 @@ public class ReturnHardwareReadingServiceImpl implements ReturnHardwareReadingSe
                 String monthOffset = LocalDateTime.now().minusSeconds(2592001).format(dtf);
                 return repository.findByDateTimeBetween(monthOffset, monthNow);
 
+            case "all":
+                return repository.findAll();
+
                 }
 
                 return null;
