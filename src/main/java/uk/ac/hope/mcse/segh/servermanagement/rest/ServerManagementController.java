@@ -21,7 +21,8 @@ class ServerManagementController {
         this.returnHardwareReadingService = returnHardwareReadingService;
     }
 
-    @CrossOrigin(origins = "http://localhost:63342")
+    //Allows this API to be accessed from anywhere on the network
+    @CrossOrigin
     @GetMapping("/getUtil")
     ResponseEntity<List<HardwareReading>> returnReading(String hardwareType, @RequestParam(value= "timePeriod") String timePeriod){
         return ResponseEntity.ok().body(returnHardwareReadingService.returnReading(timePeriod));

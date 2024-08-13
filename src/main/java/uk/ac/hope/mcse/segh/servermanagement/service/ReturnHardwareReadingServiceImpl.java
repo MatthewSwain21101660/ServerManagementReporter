@@ -24,8 +24,8 @@ public class ReturnHardwareReadingServiceImpl implements ReturnHardwareReadingSe
 
     @Override
     public List<HardwareReading> returnReading(String timePeriod) {
-
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        //Returns data from the requested time period
         switch(timePeriod) {
             case "minute" :
                 String minuteNow = LocalDateTime.now().format(dtf);
@@ -54,10 +54,9 @@ public class ReturnHardwareReadingServiceImpl implements ReturnHardwareReadingSe
 
             case "all":
                 return repository.findAll();
-
                 }
 
-                return null;
-        //return repository.findAll();
+            //If the request does not match any of these, a null is returned
+            return null;
     }
 }
