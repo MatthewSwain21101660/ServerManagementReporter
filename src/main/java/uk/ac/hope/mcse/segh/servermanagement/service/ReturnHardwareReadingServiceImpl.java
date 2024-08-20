@@ -49,7 +49,7 @@ public class ReturnHardwareReadingServiceImpl implements ReturnHardwareReadingSe
 
             case "month":
                 String monthNow = LocalDateTime.now().format(dtf);
-                String monthOffset = LocalDateTime.now().minusSeconds(2592001).format(dtf);
+                String monthOffset = LocalDateTime.now().minusSeconds(2678400).format(dtf);
                 return repository.findByDateTimeBetween(monthOffset, monthNow);
 
             case "all":
