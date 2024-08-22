@@ -1,4 +1,4 @@
-package uk.ac.hope.mcse.segh.servermanagement;
+package uk.ac.hope.mcse.segh.servermanagementreporter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,11 +1,11 @@
-package uk.ac.hope.mcse.segh.servermanagement.rest;
+package uk.ac.hope.mcse.segh.servermanagementreporter.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import uk.ac.hope.mcse.segh.servermanagement.model.HardwareReading;
-import uk.ac.hope.mcse.segh.servermanagement.repo.HardwareReadingRepository;
-import uk.ac.hope.mcse.segh.servermanagement.service.ReturnHardwareReadingService;
+import uk.ac.hope.mcse.segh.servermanagementreporter.model.HardwareReading;
+import uk.ac.hope.mcse.segh.servermanagementreporter.repo.HardwareReadingRepository;
+import uk.ac.hope.mcse.segh.servermanagementreporter.service.ReturnHardwareReadingService;
 
 import java.util.List;
 

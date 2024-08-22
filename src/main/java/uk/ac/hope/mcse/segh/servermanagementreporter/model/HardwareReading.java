@@ -1,4 +1,4 @@
-package uk.ac.hope.mcse.segh.servermanagement.model;
+package uk.ac.hope.mcse.segh.servermanagementreporter.model;
 
 import jakarta.persistence.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
